@@ -23,7 +23,7 @@ body {
             rgba(0, 55, 110, 0.25),
             rgba(0, 55, 110, 0.25)
         ),
-        url("../images/puc-background.jpg");
+        url("../images/background-puc.jpg");
     background-size: cover;
     background-position: center;
 }
