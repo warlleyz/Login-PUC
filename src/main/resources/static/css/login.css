@@ -150,3 +150,16 @@ button:hover {
         width: 100%;
     }
 }
+
+.error-message {
+    margin-bottom: 20px;
+    padding: 12px;
+
+    background-color: #fdeaea;
+    border: 1px solid #e4a4a4;
+    border-radius: 6px;
+
+    color: #a52323;
+
+    font-size: 14px;
+}

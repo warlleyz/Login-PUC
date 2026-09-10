@@ -1,76 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro | PUC Minas</title>
     <link rel="stylesheet" th:href="@{/css/login.css}">
 </head>
+
 <body>
     <main class="login-container">
         <section class="login-image">
         </section>
         <section class="login-content">
             <div class="login-box">
-                <img
-                    th:src="@{/images/logo-puc.png}"
-                    alt="Logo PUC Minas"
-                    class="logo"
-                >
+                <img th:src="@{/images/logo-puc.png}" alt="Logo PUC Minas" class="logo">
                 <h1>Crie sua conta</h1>
                 <p class="subtitle">
                     Preencha os dados abaixo para se cadastrar
                 </p>
 
-                <form>
+                <div th:if="${erro}" class="error-message">
+                    <p th:text="${erro}"></p>
+                </div>
+
+                <form th:action="@{/register}" method="post">
                     <div class="input-group">
                         <label for="name">Nome</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Digite seu nome"
-                        >
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome">
                     </div>
 
                     <div class="input-group">
                         <label for="username">Usuário</label>
-                        <input
-                            type="text"
-                            id="username"
-                            name="username"
-                            placeholder="Digite seu usuário"
-                        >
+                        <input type="text" id="username" name="username" placeholder="Digite seu usuário">
                     </div>
 
                     <div class="input-group">
                         <label for="email">E-mail</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Digite seu e-mail"
-                        >
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
                     </div>
 
                     <div class="input-group">
                         <label for="password">Senha</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Digite sua senha"
-                        >
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha">
                     </div>
 
                     <div class="input-group">
                         <label for="confirmPassword">Confirmar senha</label>
-                        <input
-                            type="password"
-                            id="confirmPassword"
-                            name="confirmPassword"
-                            placeholder="Digite sua senha novamente"
-                        >
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                            placeholder="Digite sua senha novamente">
                     </div>
 
                     <button type="submit">
@@ -88,4 +66,5 @@
         </section>
     </main>
 </body>
+
 </html>
